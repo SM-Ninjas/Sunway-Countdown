@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
