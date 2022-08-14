@@ -96,10 +96,10 @@ const MainPanel = ({ days, minutes, hours, seconds }: Counts) => {
 
         <section className='flex-1 w-full flex justify-center items-center gap-8'>
           <Icon>
-            <FaFacebookF />
+            <FaFacebookF onClick={() => window.open("https://www.facebook.com/the.sunway.show" , "_blank")}/>
           </Icon>
           <Icon>
-            <AiFillInstagram />
+            <AiFillInstagram onClick={() => window.open("https://www.instagram.com/the_sunway_show/" , "_blank")}/>
           </Icon>
         </section>
       </Wrapper>
