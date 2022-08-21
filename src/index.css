@@ -1,26 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-h1 {
-  font-size: 36px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-}
-h2 {
-  font-size: 24px;
-  font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
-}
-p {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+.notification-wrapper {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  z-index: 5;
 }
 
+.notification-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: SlideLeft 0.4s;
+  animation-fill-mode: forwards;
+  width: 300px;
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@keyframes SlideLeft {
+  0% {
+    margin-left: 120%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes SlideRight {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 120%;
+  }
+}
+
+.notification-item.exit {
+  animation: SlideRight 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.notification-item p {
+  margin: 0;
+  padding: 10px;
+}
+
+.notification-item .bar {
+  height: 10px;
+}
+.notification-item.success {
+  background-color: #82df84;
+}
+.notification-item.success p {
+  padding: 1rem 1rem;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+.notification-item.success .bar {
+  background-color: #65d266;
+}
+.notification-item.error {
+  background-color: rgb(211, 93, 93);
+}
+.notification-item.error p {
+  padding: 1rem 1rem;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.notification-item.error .bar {
+  background-color: red;
+}
