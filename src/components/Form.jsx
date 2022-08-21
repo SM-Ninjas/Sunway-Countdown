@@ -1,7 +1,6 @@
 import { useContext, useRef, useState } from 'react';
 import styled from 'styled-components';
 import InputField from './InputField';
-import emailjs from '@emailjs/browser';
 import { devices } from '../config';
 import { NotificationContext } from './Notification/NotificationProvider';
 import { v4 } from 'uuid';
@@ -88,7 +87,7 @@ const Form = () => {
   const formRef = useRef();
 
   const sendMail = async () => {
-    if (name == '' || contact == '' || email == '' || stream == '' || college == '' || pass == '') {
+    if (name === '' || contact === '' || email === '' || stream === '' || college === '' || pass === '') {
       dispatch({
         type: 'ADD_NOTIFICATION',
         payload: {
