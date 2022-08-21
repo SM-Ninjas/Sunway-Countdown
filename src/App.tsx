@@ -67,7 +67,6 @@ const App = () => {
             minutes={count.minutes}
             seconds={count.seconds}
           />
-          <CoursePanel />
         </Container>
       </RootContainer>
     </>
