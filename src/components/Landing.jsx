@@ -180,7 +180,7 @@ const Landing = () => {
     }
   };
   useEffect(() => {
-    setInterval(() => getTimeRemaining('21 Aug 2022 14:15:00 GMT'), 1000);
+    setInterval(() => getTimeRemaining('22 Aug 2022 11:15:00 GMT'), 1000);
   }, []);
 
   return (

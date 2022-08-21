@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Global from './assets/Global';
@@ -27,7 +28,8 @@ const App = () => {
   let interval: any = null;
 
   const startTimer = () => {
-    const countDownDate = new Date("August 15, 2022 ").getTime();
+    const countDownDate = new Date("August 22, 2022 ").getTime();
+    console.log(countDownDate);
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -45,8 +47,6 @@ const App = () => {
         setCount({ days, hours, minutes, seconds });
       }
     }, 1000);
-
-    console.log(count);
   }
 
   useEffect(() => {
